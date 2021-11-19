@@ -1,0 +1,11 @@
+CREATE TABLE ORDERS (
+	id INT NOT NULL AUTO_INCREMENT,
+	date DATETIME,
+	customer_id INT,
+	product_name VARCHAR(255),
+	amount FLOAT,
+	PRIMARY KEY (id),
+	UNIQUE INDEX id (id),
+	CONSTRAINT FK__CUSTOMERS FOREIGN KEY (customer_id) REFERENCES CUSTOMERS (id)
+)
+COLLATE='utf8mb4_0900_ai_ci';
